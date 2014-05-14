@@ -5,7 +5,7 @@
 
 
 This sample shows the usage of the new background capabillities of NSURLSession in iOS 7. App does not require any
-background permissions.
+background permissions. NSURLSession code and delegates abstarcted into LCBDownloadHelper to minimize view controller and UI coupling.
 
 
 ###Use cases supported:
