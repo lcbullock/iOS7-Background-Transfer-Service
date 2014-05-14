@@ -16,9 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEV-3h-Fg8">
-                                <rect key="frame" x="99" y="406" width="122" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEV-3h-Fg8">
+                                <rect key="frame" x="75" y="412" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Start Download">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,20 +27,21 @@
                                     <action selector="startDownload:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aDj-Rt-m0T"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-YC-Ppu">
-                                <rect key="frame" x="20" y="105" width="280" height="2"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fLj-YC-Ppu">
+                                <rect key="frame" x="20" y="204" width="280" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFQ-b5-qZ6">
-                                <rect key="frame" x="20" y="64" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFQ-b5-qZ6">
+                                <rect key="frame" x="20" y="163" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGO-l2-Fty">
-                                <rect key="frame" x="99" y="450" width="122" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGO-l2-Fty">
+                                <rect key="frame" x="75" y="450" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Crash App">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -50,16 +52,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OEV-3h-Fg8" firstAttribute="top" secondItem="fLj-YC-Ppu" secondAttribute="bottom" constant="299" id="2vo-53-8ff"/>
+                            <constraint firstItem="OEV-3h-Fg8" firstAttribute="top" secondItem="fLj-YC-Ppu" secondAttribute="bottom" constant="206" id="2vo-53-8ff"/>
+                            <constraint firstItem="OEV-3h-Fg8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="75" id="FQK-ep-iVK"/>
                             <constraint firstItem="fLj-YC-Ppu" firstAttribute="top" secondItem="IFQ-b5-qZ6" secondAttribute="bottom" constant="20" id="HPj-YB-oL9"/>
-                            <constraint firstItem="SGO-l2-Fty" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="99" id="LOP-fb-rjc"/>
+                            <constraint firstItem="SGO-l2-Fty" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="75" id="LOP-fb-rjc"/>
                             <constraint firstItem="fLj-YC-Ppu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Nz4-Rg-rJp"/>
-                            <constraint firstAttribute="trailing" secondItem="OEV-3h-Fg8" secondAttribute="trailing" constant="99" id="Q7e-ou-gyQ"/>
+                            <constraint firstAttribute="trailing" secondItem="OEV-3h-Fg8" secondAttribute="trailing" constant="75" id="Q7e-ou-gyQ"/>
                             <constraint firstItem="SGO-l2-Fty" firstAttribute="top" secondItem="OEV-3h-Fg8" secondAttribute="bottom" constant="14" id="Tai-bb-FFA"/>
-                            <constraint firstItem="OEV-3h-Fg8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="99" id="ULV-No-uuV"/>
+                            <constraint firstItem="OEV-3h-Fg8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="75" id="ULV-No-uuV"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OEV-3h-Fg8" secondAttribute="trailing" constant="75" id="esb-k2-9n4"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SGO-l2-Fty" secondAttribute="bottom" constant="88" id="hCI-LL-Bxl"/>
                             <constraint firstAttribute="trailing" secondItem="IFQ-b5-qZ6" secondAttribute="trailing" constant="20" id="iB7-rs-HaA"/>
-                            <constraint firstAttribute="trailing" secondItem="SGO-l2-Fty" secondAttribute="trailing" constant="99" id="ivA-fV-IqS"/>
+                            <constraint firstAttribute="trailing" secondItem="SGO-l2-Fty" secondAttribute="trailing" constant="75" id="ivA-fV-IqS"/>
                             <constraint firstAttribute="trailing" secondItem="fLj-YC-Ppu" secondAttribute="trailing" constant="20" id="o6i-xS-qqX"/>
                             <constraint firstItem="IFQ-b5-qZ6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="xE8-DJ-IYP"/>
                         </constraints>
