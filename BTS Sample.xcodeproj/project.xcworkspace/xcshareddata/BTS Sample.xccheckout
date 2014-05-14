@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>32D135F3-EA0B-461E-9080-00A3D001ABCD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BTS Sample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FEAF60BE-FB24-4C27-9EC4-54FF8617F9B9</key>
+		<string>https://github.com/lcbullock/iOS7-Background-Transfer-Service.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BTS Sample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FEAF60BE-FB24-4C27-9EC4-54FF8617F9B9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lcbullock/iOS7-Background-Transfer-Service.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FEAF60BE-FB24-4C27-9EC4-54FF8617F9B9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FEAF60BE-FB24-4C27-9EC4-54FF8617F9B9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BTS Sample</string>
+		</dict>
+	</array>
+</dict>
+</plist>
