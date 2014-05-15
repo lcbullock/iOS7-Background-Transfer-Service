@@ -5,7 +5,7 @@
 
 
 This sample shows the usage of the new background capabillities of NSURLSession in iOS 7. App does not require any
-background permissions. NSURLSession code and delegates abstarcted into LCBDownloadHelper to minimize view controller and UI coupling.
+background permissions. NSURLSession code and delegates encapsulated into LCBDownloadHelper to minimize view controller and UI coupling.
 
 
 ###Use cases supported:
@@ -18,6 +18,7 @@ background permissions. NSURLSession code and delegates abstarcted into LCBDownl
 ###To do:
 - Handle resuming partial download. If download cannot complete in background, we can resume from partial progress when network is available.
 - We can also use this to resume a download upon app launch when the app was killed by user (swiping up in running apps list). When app termination is user initiated iOS will not continue the background download but we can resume from current progress when user relaunches app.
+- Needs a bit of work on the UI delegate callbacks to flesh out support for multiple session tasks in UI layer.
   
   
 ###Notes:
