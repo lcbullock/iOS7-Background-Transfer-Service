@@ -17,6 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UIProgressView *downloadProgressView;
 @property (weak, nonatomic) IBOutlet UILabel *downloadLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIButton *downloadButton;
 
 - (IBAction)startDownload:(id)sender;
 - (IBAction)crashApp:(id)sender;

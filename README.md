@@ -14,11 +14,10 @@ background permissions. NSURLSession code and delegates encapsulated into LCBDow
 - If download finished in background, app will change UI display in running apps list (double click HOME) to indicate that download is finished.
 - If app crashes or is terminated by iOS (use crash app button to test) download will continue and app will be launched in background upon completion.
 - If app is relaunched after crash/iOS termination, UI will resync with running session to show progress.
+- In other cases where background download cannot complete, if user restarts download upon next launch of app we resume from partial download when possible. This happens when user kills app (swipe app up in launcher screen after double click home) as iOS will always terminate background transfer in response to user initiated kill.
   
 ###To do:
-- Handle resuming partial download. If download cannot complete in background, we can resume from partial progress when network is available.
-- We can also use this to resume a download upon app launch when the app was killed by user (swiping up in running apps list). When app termination is user initiated iOS will not continue the background download but we can resume from current progress when user relaunches app.
-- Needs a bit of work on the UI delegate callbacks to flesh out support for multiple session tasks in UI layer.
+- Change UI to show multi-file download progress.
   
   
 ###Notes:

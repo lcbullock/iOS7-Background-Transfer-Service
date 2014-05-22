@@ -51,6 +51,7 @@
 		7E51733B1923E7BE0012E2A6 /* LCBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCBViewController.h; sourceTree = "<group>"; };
 		7E51733C1923E7BE0012E2A6 /* LCBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCBViewController.m; sourceTree = "<group>"; };
 		7E51733D1923E7BE0012E2A6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7EABDD9F192D787600289654 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 		7E5172EB19218C820012E2A6 = {
 			isa = PBXGroup;
 			children = (
+				7EABDD9F192D787600289654 /* README.md */,
 				7E51732F1923E7BE0012E2A6 /* BTS Sample */,
 				7E5172F619218C830012E2A6 /* Frameworks */,
 				7E5172F519218C830012E2A6 /* Products */,
@@ -341,11 +343,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BTS Sample/BTS Sample-Prefix.pch";
 				INFOPLIST_FILE = "BTS Sample/BTS Sample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				KEEP_PRIVATE_EXTERNS = NO;
 				PRODUCT_NAME = "BTS Sample";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -356,11 +361,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BTS Sample/BTS Sample-Prefix.pch";
 				INFOPLIST_FILE = "BTS Sample/BTS Sample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				KEEP_PRIVATE_EXTERNS = NO;
 				PRODUCT_NAME = "BTS Sample";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

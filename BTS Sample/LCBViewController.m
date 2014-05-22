@@ -8,12 +8,11 @@
 
 #import "LCBViewController.h"
 
-@interface LCBViewController ()
 
-@end
+
+NSString * const FILE_TO_DOWNLOAD = @"http://www.wswd.net/testdownloadfiles/10MB.zip";
 
 @implementation LCBViewController
-
 
 - (void)viewDidLoad
 {
@@ -37,10 +36,12 @@
 
 - (IBAction)startDownload:(id)sender
 {
+	self.statusLabel.text = FILE_TO_DOWNLOAD;
 	self.downloadProgressView.hidden = NO;
 	self.downloadProgressView.progress = 0.0;
 	self.downloadLabel.text = @"Starting Download...";
-	[[self getDownloadHelper] addDownloadTask:@"http://www.wswd.net/testdownloadfiles/10MB.zip"];
+	self.downloadButton.enabled = NO;
+	[[self getDownloadHelper] downloadFile:FILE_TO_DOWNLOAD];
 	
 }
 
@@ -61,29 +62,39 @@
 
 #pragma mark - LCBDownloadStatusDelegate implementation.
 
-- (void)bytesReceived:(long long)receivedBytes ofTotal:(long long)totalBytes
+- (void)bytesReceived:(long long)receivedBytes ofTotal:(long long)totalBytes forFile:(NSString *)url
 {
 	self.downloadProgressView.progress = (float)receivedBytes / (float)totalBytes;
-	self.downloadLabel.text = [NSString stringWithFormat:@"%lld of %lld bytes received.", receivedBytes, totalBytes];
+	self.downloadLabel.text = [NSString stringWithFormat:@"%lld of %lld KB received", receivedBytes>>10, totalBytes>>10];
 }
 
--(void)downloadFinished
+-(void)downloadFinishedForFile:(NSString *)url newFileLocation:(NSString *)localFileUrl
 {
-	self.downloadLabel.text = @"Download Complete!";
+	self.downloadButton.enabled = YES;
+	self.statusLabel.text = url;
+	self.downloadLabel.text = [NSString stringWithFormat:@"Download completed."];
 	self.downloadProgressView.Hidden = YES;
 }
 
--(void)downloadError
+-(void)downloadErrorForFile:(NSString *)url
 {
-	self.downloadLabel.text = @"Error in download.";
+	self.downloadButton.enabled = YES;
+	self.statusLabel.text = url;
+	self.downloadLabel.text = [NSString stringWithFormat:@"Error downloading"];
 	self.downloadProgressView.hidden = YES;
+}
+
+-(void)downloadResumedForFile:(NSString *)url
+{
+	self.statusLabel.text = [NSString stringWithFormat:@"Resumed download for %@",url];
+	
 }
 
 -(void)sessionActive
 {
+	self.downloadButton.enabled = NO;
 	self.downloadLabel.text = @"Connecting to running session...";
 	self.downloadProgressView.hidden = NO;
-	
 }
 
 @end

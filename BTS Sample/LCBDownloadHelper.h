@@ -10,9 +10,10 @@
 
 @protocol LCBDownloadStatusDelegate <NSObject>
 
--(void)bytesReceived:(long long)receivedBytes ofTotal:(long long)totalBytes;
--(void)downloadFinished;
--(void)downloadError;
+-(void)bytesReceived:(long long)receivedBytes ofTotal:(long long)totalBytes forFile:(NSString*)url;
+-(void)downloadFinishedForFile:(NSString*)url newFileLocation:(NSString*)localFileUrl;
+-(void)downloadResumedForFile:(NSString*)url;
+-(void)downloadErrorForFile:(NSString*)url;
 -(void)sessionActive;
 
 @end
@@ -23,8 +24,6 @@
 @property (copy) void (^backgroundCompletionHandler)();
 
 +(instancetype)downloadHelperForIdentifier:(NSString*)identifier;
-
--(void)addDownloadTask:(NSString*)urlString;
--(id)initWithIdentifier:(NSString*)identifier;
+-(void)downloadFile:(NSString*)urlString;
 
 @end
